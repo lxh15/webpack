@@ -25,7 +25,11 @@ module.exports = {
         new CleanWebpackPlugin(),
         // 删除的是 dist 的那个输出文件的文件夹
 
-    ]
+    ],
+    devServer: {
+        port: 3000, // 端口号
+        open: true // 自动打开浏览器
+    }
 
 }
 
