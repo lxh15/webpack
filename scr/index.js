@@ -7,3 +7,7 @@
 // 引入banner.js和tabs.js
 import './banner.js'
 import './tab.js'
+
+// 引入jquery
+import $ from 'jquery'
+$('#swiper').css('background-color', 'red')
