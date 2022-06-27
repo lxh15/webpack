@@ -5,11 +5,11 @@
 
 
 // 引入banner.js和tabs.js
-import './banner.js'
-import './tab.js'
+import './banner'
+import './tab'
 
 // 引入jquery
-import $ from 'jquery'
+import $, { fn } from 'jquery'
 $('#swiper').css('background-color', 'red')
 
 // 引入css文件 
@@ -34,3 +34,18 @@ document.body.appendChild(img);
 
 // 引入字体图标文件
 import './assets/fonts/iconfont.css'
+
+
+// 高级语法
+class App {
+    static a = 123
+}
+
+console.log(App.a)
+
+
+const str = () => {
+    console.log('======')
+}
+
+str()

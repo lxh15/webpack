@@ -111,7 +111,18 @@ module.exports = {
             //             }
             //         ]
             // }
-            
+
+            // 高级语法
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'] // 预设:转码规则(用bable开发环境本来预设的)
+                    }
+                }
+            },
         ]
     }
 
