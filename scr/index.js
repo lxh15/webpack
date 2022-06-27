@@ -17,3 +17,17 @@ import './styles/index.css'
 
 // 引入less文件 
 import './styles/index.less'
+
+
+// 引用图片
+import imgUrl from './assets/1.gif';
+
+let img = document.createElement('img');
+img.src = imgUrl;
+document.body.appendChild(img);
+
+// 引入图片-使用
+// import imgUrl from './assets/1.gif'
+// const theImg = document.createElement("img")
+// theImg.src = imgUrl
+// document.body.appendChild(theImg)
