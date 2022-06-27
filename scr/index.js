@@ -31,3 +31,6 @@ document.body.appendChild(img);
 // const theImg = document.createElement("img")
 // theImg.src = imgUrl
 // document.body.appendChild(theImg)
+
+// 引入字体图标文件
+import './assets/fonts/iconfont.css'
