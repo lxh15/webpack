@@ -3,6 +3,12 @@ const path = require('path')
 
 // 引入打包html模块
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+// 引入自动清除dist目录内容插件
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+
+
 module.exports = {
     mode: 'development',
     entry: './scr/index.js',// 入口
@@ -15,8 +21,9 @@ module.exports = {
         new HtmlWebpackPlugin({ // 自定义配置
             template: './public/index.html',  // 打包的文件模板
             filename: 'index.html',  //  打包生成的文件名
-
-        })
+        }),
+        new CleanWebpackPlugin(),
+        // 删除的是 dist 的那个输出文件的文件夹
 
     ]
 
