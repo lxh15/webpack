@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // 引入自动清除dist目录内容插件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+// 
 
 
 module.exports = {
@@ -26,9 +27,22 @@ module.exports = {
         // 删除的是 dist 的那个输出文件的文件夹
 
     ],
+    // 配置开发服务器
     devServer: {
         port: 3000, // 端口号
         open: true // 自动打开浏览器
+    },
+    // 配置的loader
+    module: {
+        rules: [ // 规则
+            { // 配置处理css
+                test: /\.css$/, // 匹配以 css结尾的文件
+                // css-loader 把css 文件转换成 webpack 可以识别的文件
+                // style-loader 把css代码 插入到dom中
+                // loader 执行 从右往左
+                use: ['style-loader', 'css-loader']
+            },
+        ]
     }
 
 }
