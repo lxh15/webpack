@@ -3,7 +3,7 @@ module.exports = {
     mode: 'development',
     entry: './scr/index.js',// 入口
     output: { // 出口
-        path: path.resolve(__dirname, 'dist'), // 路径
+        path: path.resolve(__dirname, 'dist'), //出口路径 绝对路径
         filename: 'bundle.js' // 输出的文件名
     }
 }

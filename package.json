@@ -9,7 +9,7 @@
     "webpack-cli": "^4.10.0"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --config webpack.config11.js"
   },
   "dependencies": {
     "jquery": "^3.6.0"
