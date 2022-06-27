@@ -49,3 +49,6 @@ const str = () => {
 }
 
 str()
+
+// 添加vue文件
+import vue from './app.vue'

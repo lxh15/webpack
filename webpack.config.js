@@ -7,7 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // 引入自动清除dist目录内容插件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-// 
+// vue
+const { VueLoaderPlugin } = require('vue-loader')
 
 
 module.exports = {
@@ -25,6 +26,9 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         // 删除的是 dist 的那个输出文件的文件夹
+
+        // vue
+        new VueLoaderPlugin()
 
     ],
     // 配置开发服务器
@@ -122,6 +126,11 @@ module.exports = {
                         presets: ['@babel/preset-env'] // 预设:转码规则(用bable开发环境本来预设的)
                     }
                 }
+            },
+            // 添加vue文件
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
             },
         ]
     }
